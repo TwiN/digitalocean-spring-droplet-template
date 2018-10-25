@@ -10,10 +10,10 @@ For now, the initial configuration is expected to be the following:
 Later on, perhaps support for different distributions will be added.
 
 
-## What does it do
+## What does it do?
 
 - Installs the latest JDK
-- Generates a LetsEncrypt TLS certificate using certbot
+- Generates a TLS certificate with LetsEncrypt using [certbot](https://github.com/certbot/certbot)
 - Installs Nginx to use as reverse proxy for SSL/TLS termination 
 
 Nginx will listen to port 80 and port 443. 
@@ -21,7 +21,10 @@ Nginx will listen to port 80 and port 443.
 - If the port is 443, then the user will see where Nginx' reverse proxy is pointing to, 
 which is the port your application is bound to.
 
+## How does it work?
 
-## Requirements
+```bash
+sudo ./install.sh yourdomain.com 8080
+```
 
-Your application must listen on the port 8080.
+where `8080` is the port on which your application runs on (cannot be 443 or 80).
