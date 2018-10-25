@@ -21,10 +21,23 @@ Nginx will listen to port 80 and port 443.
 - If the port is 443, then the user will see where Nginx' reverse proxy is pointing to, 
 which is the port your application is bound to.
 
+
 ## How does it work?
 
+_Assuming you already ssh'd in the droplet using the root user_
+
 ```bash
-sudo ./install.sh yourdomain.com 8080
+git clone https://github.com/TwinProduction/digitalocean-spring-droplet-template
+cd digitalocean-spring-droplet-template
+chmod 755 install.sh
+./install.sh yourdomain.com 8080
 ```
 
 where `8080` is the port on which your application runs on (cannot be 443 or 80).
+
+
+## Requirements
+
+- Create a new Ubuntu 18.04 x64 droplet
+- Have a domain pointing to DigitalOcean's name servers
+- Have that domain pointing to your new droplet using an `A` record
