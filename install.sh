@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "$1" = "" ]; then
+if [ "$1" = "" ] || [ "$2" = "" ]; then
 	echo "USAGE: ./install.sh domain port"
 	echo "e.g. ./install.sh twinnation.org 8080"
 	exit 1
@@ -8,6 +8,12 @@ fi
 
 domain=$1
 application_port=$2
+
+if [ "$application_port" = "80" ] || [ "$application_port" = "443" ]; then
+	echo "ERROR: Your application cannot use the port 80 or the port 443"
+	echo "Nginx will listen on both 80 and 443 of those ports and redirect requests to the port your application uses"
+	exit 1
+fi
 
 # Install the latest JDK
 apt install -y default-jdk
