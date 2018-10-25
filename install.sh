@@ -45,7 +45,7 @@ ufw allow 443/tcp
 add-apt-repository -y ppa:certbot/certbot
 apt update
 apt install -y certbot python-certbot-nginx
-certbot --nginx --preferred-challenges http -d ${domain} --register-unsafely-without-email --agree-tos --redirect
+certbot --nginx certonly --preferred-challenges http -d ${domain} --register-unsafely-without-email --agree-tos --redirect
 
 nginx_config="
 server {
