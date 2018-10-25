@@ -3,6 +3,11 @@
 As the name more or less implies, this repository is a template of the necessary 
 dependencies required to run a spring boot application on a fresh droplet.
 
+Rather than having your Spring application take care of the certificates, this uses Nginx as reverse proxy
+to perform SSL termination.
+
+![scheme](img/scheme.png)
+
 For now, the initial configuration is expected to be the following:
 
 - Ubuntu 18.04 x64
