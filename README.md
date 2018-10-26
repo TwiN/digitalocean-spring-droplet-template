@@ -8,6 +8,8 @@ to perform SSL termination. If the user tries to use HTTP rather than HTTPS, Ngi
 
 ![scheme](img/scheme.png)
 
+\* _NOTE: HTTP (80) gets redirected to HTTPS (443)_
+
 For now, the initial configuration is expected to be the following:
 
 - Ubuntu 18.04 x64
