@@ -72,4 +72,5 @@ server {
 
 echo "$nginx_config" | tee /etc/nginx/sites-available/default > /dev/null
 
+pkill -f "nginx"
 service nginx start
