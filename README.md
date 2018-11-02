@@ -10,9 +10,10 @@ to perform SSL termination. If the user tries to use HTTP rather than HTTPS, Ngi
 
 \* _NOTE: HTTP (80) gets redirected to HTTPS (443)_
 
-For now, the initial configuration is expected to be the following:
+For now, the initial configuration is expected to be one of the following:
 
 - Ubuntu 18.04 x64
+- Ubuntu 16.04 x64
 
 Later on, perhaps support for different distributions will be added.
 
