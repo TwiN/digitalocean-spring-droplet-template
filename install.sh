@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$1" = "" ] || [ "$2" = "" ]; then
-	echo "USAGE: ./install.sh domain port"
+	echo "USAGE: ./install.sh <domain> <port>"
 	echo "e.g. ./install.sh example.com 8080"
 	exit 1
 fi
